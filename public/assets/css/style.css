@@ -1,0 +1,2912 @@
+/*-----------------------------------------------------------------------------------
+
+    [Master Stylesheet]
+
+    Project:    Anex
+
+    Version:    1.0
+
+-----------------------------------------------------------------------------------
+
+    [Table of contents]
+
+        01. header
+        02. hero-section
+        03. get-a-quote
+        04. btn
+        05. heading
+        06. count-style
+        07. unlimited-design
+        08. consulting-business-text
+        09. ul.check-list
+        10. clients-slider
+        11. video
+        12. #services
+        13. clients-rate
+        14. team-style
+        15. quotation-mark
+        16. pricing-plan-style
+        17. accordion-section
+        18. blog style
+        19. footer
+        20. social-icon
+        21. copyright
+        22. subscribe-with
+        23. video-fram
+        24. progress go to top
+        25. preloader
+
+-----------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+body {
+    font-family: 'Instrument Sans';
+    overflow-x: hidden;
+}
+p{
+    font-family: 'Instrument Sans';
+    font-size: 16px;
+    line-height: 30px;
+    color: #444;
+    margin: 0;
+    font-weight: 400;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a,h2,h3,h4,h5,h6{
+    color: #000;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+h1{
+  font-family: 'Lora';
+  font-size: 90px;
+  line-height: 100px;
+}
+h2{
+
+    font-size: 60px;
+}
+h3{
+    font-size: 26px;
+}
+h4{
+    font-size: 24px;
+}
+h5{
+    font-size: 20px;
+}
+h6{
+    font-size: 18px;
+}
+img {
+    max-width: 100%;
+}
+.gap {
+    padding: 120px 0;
+}
+.no-top{
+    padding-top: 0;
+}
+.no-bottom{
+    padding-bottom: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    display: block;
+}
+figure {
+    overflow: hidden;
+}
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fafafa;
+    z-index: 10;
+    min-width: 732px;
+    transition: border .2s ease;
+    border-bottom: 1px solid transparent;
+}
+/* 01. header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+.top-bar ul li a {
+    text-align: right;
+    color: #333;
+    text-decoration: none;
+}
+@media only screen and (max-width: 1920px) and (min-width: 1200px){
+    #stickyHeader.slideUp {
+        top: 0;
+        border: 0;
+        z-index: 111;
+        position: fixed;
+        border-radius: 0;
+        left: 0;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+        padding-bottom: 5px;
+        padding-top: 5px;
+        background: linear-gradient(89.98deg,#fff .39%,#ffffff60 99.99%);
+    }
+}
+header {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #A8A8A8;
+}
+.top-bar ul li {
+    padding-left: 50px;
+}
+.top-bar ul li a {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.clients-slider .item {
+    display: flex;
+    justify-content: center;
+}
+.top-bar ul li a,.top-bar a {
+    transition: .3s ease-in-out;
+}
+.login {
+    display: flex;
+    justify-content: space-between;
+}
+.login .btn {
+    padding: 15px 32px;
+    color: #fff;
+}
+.login .btn:hover {
+    color: #fff;
+}
+.login > a {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.drop-div {
+    display: flex; /* Чтобы dropdown-menu и стрелка выравнивались по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+.dropdown-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+    margin-right: 40px; /* Добавлен отступ справа */
+    border: none;
+    min-width: 250px;
+    padding-left: 20px;
+}
+.dropdown-menu > span >h3 {
+    font-weight: bold;
+}
+.arrow {
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000; /* Цвет стрелочки */
+}
+
+.dropdown-content {
+    display: none; /* Меню скрыто по умолчанию */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 225px; /* Отступ от меню */
+    border-radius: 0 0 5px 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.started-text > a {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.hover-link {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-decoration: none;
+}
+.hover-link:hover {
+    color: #108A00;
+}
+.service-link {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    text-decoration: none;
+    color: white;
+}
+.service-link:hover {
+    color: #108A00;
+}
+.back {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.back-reg {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+/* 02. hero-section */
+.hero-text p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    width: 75%;
+    padding-bottom: 43px;
+}
+.started-text p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    width: 75%;
+}
+.container p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    width: 100%;
+}
+.consulting-business-text p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    width: 75%;
+}
+
+ul.stars {
+    display: inline-flex;
+}
+ul.stars li {
+    padding: 4px 2px;
+    line-height: 0;
+}
+ul.stars li i {
+    color: #ffd545;
+    font-size: 14px;
+}
+.rating {
+    display: flex;
+    align-items: end;
+}
+.rating h4 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 17px;
+}
+.rating h5 {
+    font-size: 16px;
+    padding-right: 14px;
+}
+/* 03. get-a-quote */
+form#contact-form h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.get-a-quote h6 {
+    color: #444;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 29px;
+}
+.get-a-quote {
+    margin: 50px auto;
+    background-color: #fcf5eb;
+    padding: 20px 50px;
+    border-radius: 40px;
+    position: relative;
+    border: 3px solid #000;
+}
+.get-a-quote:before {
+    content: "";
+    position: absolute;
+    top: -6%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -9%;
+    height: 85px;
+    background-repeat: no-repeat;
+}
+.get-a-quote p {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.get-a-quote input, .get-a-quote input[type="number"] {
+    width: 100%;
+    height: 55px;
+    outline: 0;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 45px;
+    padding: 25px;
+    border: 1px solid #444;
+}
+.get-a-quote input[type="text"]::placeholder, .get-a-quote input[type="number"]::placeholder {
+    color: black;
+}
+.radio-button {
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    align-items: normal;
+    display: flex;
+    margin-bottom: 35px;
+}
+.radio-button label {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.radio-button input{
+    width: 22px;
+    height: 22px;
+}
+
+.group-img i {
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #444;
+    width: 55px;
+    height: 55px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.city-group-img i {
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #444;
+    width: 55px;
+    height: 55px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.get-a-quote img {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 04. btn */
+.btn {
+    text-transform: capitalize;
+    border-radius: 50px;
+    color: #fff !important;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 16px 48px;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    white-space: pre;
+    z-index: 1;
+    letter-spacing: 1px;
+    border: 0;
+}
+.btn:after {
+    background-color: #1c1e21;
+    border-radius: 50%;
+    content: '';
+    height: 167px;
+    min-width: 167px;
+    position: absolute;
+    top: 100%;
+    transition: transform .7s cubic-bezier(.66, .00, .34, 1.00);
+    width: 100%;
+    z-index: -1;
+    left: 0;
+}
+.btn:hover:after {
+    transform: scale(2.47) translateY(0);
+    top: 100%;
+}
+.hero-section {
+    overflow: hidden;
+    padding-top: 90px;
+    padding-bottom: 120px;
+    position: relative;
+}
+img.shaps-dots {
+    position: absolute;
+    right: 11%;
+    bottom: 12%;
+    z-index: -1;
+    animation: 7s infinite animation03;
+}
+img.shaps-line {
+    left: 39%;
+    position: absolute;
+    bottom: 25%;
+}
+/* 05. heading */
+.heading {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+.heading h2 {
+    font-family: 'Lora';
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 500;
+}
+.heading h2 span {
+    border-bottom: 8px solid #108A00;
+    line-height: 54px;
+    display: inline-block;
+}
+.heading p {
+    font-size: 22px;
+    line-height: 32px;
+    padding-top: 16px;
+}
+/* 06. count-style */
+.count-style h3 {
+    font-size: 70px;
+    font-weight: bold;
+}
+.count-style h3 sub {
+    font-size: 30px;
+}
+.count-style span {
+    font-size: 16px;
+    width: 87%;
+    display: block;
+}
+.count-text {
+    width: 40%;
+    z-index: 11;
+}
+sub {
+    bottom: 0;
+}
+.count-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* 07. unlimited-design */
+.unlimited-design {
+    position: relative;
+}
+.background-color {
+    position: relative;
+    padding-bottom: 120px;
+}
+.background-color:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#ffffff00 40%, #ffffff);
+    bottom: 0;
+    z-index: 0;
+    border-radius: 20px;
+}
+.unlimited-design img.shaps-line {
+    left: 12%;
+    bottom: auto;
+    top: 38%;
+}
+.unlimited-design img.shaps-dots {
+    right: 11%;
+    bottom: 28%;
+    z-index: 0;
+}
+.unlimited-design img {
+    z-index: 11;
+    border-radius: 20px;
+}
+.heading.two {
+    text-align: left;
+    margin: 0;
+}
+/* 08. consulting-business-text */
+.consulting-business-text {
+    position: relative;
+    width: 94%;
+    text-align: center;
+    border: 5px solid;
+    border-radius: 20px;
+    padding: 25px;
+    padding-bottom: 0;
+    z-index: 11;
+    margin-bottom: 46px;
+}
+.consulting-business-text h4 {
+    font-size: 30px;
+    width: 84%;
+    margin: auto;
+    font-weight: bold;
+}
+.consulting-business-text p {
+    margin: auto;
+    width: 80%;
+    padding-top: 7px;
+}
+.consulting {
+    background-color: #FFE773;
+    border-radius: 20px;
+    margin-bottom: -50px;
+    margin-top: 30px;
+    padding: 38px;
+}
+.consulting-business-text span {
+    font-size: 40px;
+    color: #000000;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    line-height: 40px;
+}
+.consulting-business-text:before {
+    content: "";
+    position: absolute;
+    top: -11%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -13%;
+    height: 91px;
+    transform: scale(0);
+    background-repeat: no-repeat;
+}
+.consulting-business-text:hover:before {
+    transform: scale(1);
+}
+.consulting img {
+    width: 120px;
+}
+.consulting-business-text:hover {
+    background-color: #ffe77370;
+}
+.consulting-business-text.two:hover {
+    background-color: #FFC0B370;
+}
+.consulting-business-text.two .consulting {
+    background-color: #FFC0B3;
+}
+.consulting-business-text.three:hover {
+    background-color: #BDFFB270;
+}
+.consulting-business-text.three .consulting {
+    background-color: #BDFFB2;
+}
+.started {
+    position: relative;
+}
+.started img.shaps-dots {
+   right: 40%;
+    bottom: 4%;
+    z-index: -2;
+}
+.heading.two p {
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+.heading.two p {
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+/* 09. ul.check-list */
+ul.check-list li{
+    display: flex;
+    align-items: center;
+
+}
+ul.check-list li:not(:last-child) {
+    margin-bottom: 16px;
+}
+ul.check-list img {
+    margin-right: 10px;
+}
+ul.check-list li {
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #444;
+}
+/* 10. clients-slider */
+.clients-slider .item img {
+    width: 210px;
+}
+.clients-slider .owl-dots {
+    display: none;
+}
+.recommended {
+    text-align: center;
+}
+.recommended h5 {
+    font-weight: bold;
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+.provide {
+    position: relative;
+}
+.img-provide img {
+    z-index: 11;
+    position: relative;
+}
+.provide img.shaps-dots {
+    right: auto;
+    bottom: 67%;
+    z-index: 0;
+    left: 10%;
+}
+/* 11. video */
+.video {
+    position: relative;
+    right: 0;
+    text-align: center;
+}
+.video img {
+    border-radius: 20px;
+}
+.video i {
+    position: absolute;
+    animation: shadow-pulse 1s infinite;
+    width: 94px;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 3px solid #000;
+}
+@keyframes shadow-pulse{
+    0% {
+        box-shadow: 0 0 0 0px rgb(255 255 255);
+    }
+    100% {
+        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
+}
+/* 12. #services */
+#services {
+    background-color: #000;
+}
+#services .heading h2,#services .heading p {
+    color: #fff;
+}
+.service-text {
+    margin-bottom: 45px;
+}
+.service-text i {
+    width: 100px;
+    height: 108px;
+    background-color: #FFE773;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.service-text:hover i svg {
+    transform: rotatey(180deg);
+}
+.service-text.two i {
+    background-color: #FFC0B3;
+}
+.service-text.three i{
+    background-color: #BDFFB2;
+}
+.service-text.for i{
+    background-color: #9FE8FF;
+}
+.service-text.two {
+    margin-bottom: 0px;
+}
+.service-text.for {
+    margin-bottom: 0px;
+}
+.service-text a h4 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.service-text p {
+    color: #DEDEDE;
+    line-height: 26px;
+}
+/* 13. clients-rate */
+.clients-rate {
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    padding: 40px 47px;
+    margin-top: 30px;
+    height: 830px;
+}
+.clients-rate img {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.clients-rate h3 {
+    font-size: 82px;
+    color: #fff;
+}
+.clients-rate h3 span {
+    font-size: 34px;
+    padding-left: 10px;
+}
+.clients-rate p {
+    color: #fff;
+    padding-bottom: 22px;
+}
+.clients-rate ul.stars li i {
+    color: #fff;
+    font-size: 20px;
+}
+.clients-data {
+    width: 94%;
+}
+.clients-data p {
+    font-size: 18px;
+}
+/* 14. team-style */
+.team-style {
+    position: relative;
+}
+.team-style img {
+    border-radius: 20px;
+}
+.team-style:before {
+    content: "";
+    position: absolute;
+    top: -8%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -13%;
+    height: 91px;
+    transform: scale(0);
+    background-repeat: no-repeat;
+}
+.team-style:hover:before {
+    transform: scale(.7);
+}
+.team-text {
+
+    padding: 30px;
+    margin-top: -16px;
+    padding-top: 54px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.team-style:hover .team-text {
+
+}
+.team-text h3 {
+    padding-top: 40px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.team-text h4 {
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 27px;
+}
+.team-text h6 {
+    color: #444;
+    font-weight: bold;
+    padding-bottom: 29px;
+    text-transform: capitalize;
+}
+.team-text a.brand i {
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    transition: color .33s linear .5s, border-color ease-out .5s, background-color .33s linear 0s;
+    vertical-align: bottom;
+    width: 48px;
+    z-index: 1;
+}
+.team-text a.brand i:after {
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    content: '';
+    height: 67px;
+    position: absolute;
+    top: 0;
+    transform: scale(1) translateY(67px);
+    transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
+    width: 67px;
+    z-index: -1;
+}
+.team-text a.brand:hover i {
+    color: #ffffff;
+}
+.team-text a.brand i:hover:after {
+    transform: scale(1.47) translateY(0);
+}
+.team-text h6 a {
+    padding-left: 10px;
+    color: #444;
+    font-weight: 400;
+}
+.team-style.two {
+    display: flex;
+}
+.team-style.two img {
+    height: 254px;
+}
+.team-style.two img {
+    z-index: 11;
+}
+.team-style.two .team-text {
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    margin: 0;
+    margin-left: -37px;
+    z-index: 0;
+    padding-left: 80px;
+}
+.team-style.two:before {
+    left: -8%;
+    top: -18%;
+}
+/* 15. quotation-mark */
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+    height: auto;
+}
+.quotation-mark {
+    text-align: center;
+    margin: auto;
+}
+.quotation-mark img {
+    margin: auto;
+    margin-bottom: 52px;
+}
+.quotation-mark h6 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.quotation-mark h6 span {
+    font-weight: 500;
+}
+.quotation-mark p {
+    font-size: 30px;
+    line-height: 50px;
+    width: 78%;
+    margin: auto;
+}
+.quotation-mark ul.stars {
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+.quotation-mark figure {
+    position: relative;
+    width: max-content;
+    margin: auto;
+}
+.quotation-mark figure:before {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 90px;
+    height: 70px;
+    background-image: url(../img/quotation-mark-shap.png);
+    z-index: -1;
+    right: 44px;
+    background-repeat: no-repeat;
+}
+@keyframes animation01 {
+    0% {
+    transform: scale(1.0); }
+    50% {
+    transform: scale(1.3); }
+    100% {
+    transform: scale(1.0); }
+}
+@keyframes animation02 {
+    0% {
+    transform: translate(0px, 0px) rotate(0); }
+    25% {
+    transform: translate(-10px, -10px) rotate(5deg); }
+    50% {
+    transform: translate(-20px, 0px) rotate(0); }
+    75% {
+    transform: translate(-10px, -10px) rotate(-2deg); }
+    100% {
+    transform: translate(0, 0) rotate(0); }
+}
+@keyframes animation03 {
+    0% {
+    transform: translateY(0px); }
+    50% {
+    transform: translateY(15px); }
+    100% {
+    transform: translateY(0px); }
+}
+.quotation-mark-img img {
+    position: absolute;
+    border-radius: 70%;
+}
+.quotation-mark-img img:nth-child(1) {
+    left: 9%;
+    top: 0%;
+    animation: 7s infinite animation01;
+}
+.quotation-mark-img img:nth-child(2) {
+    left: 27%;
+    top: 10%;
+    animation: 7s infinite animation02;
+}
+.quotation-mark-img img:nth-child(3) {
+    left: 63%;
+    top: 0;
+    animation: 7s infinite top;
+}
+.quotation-mark-img img:nth-child(4) {
+    right: 16%;
+    top: 10%;
+    animation: 7s infinite animation02;
+}
+.quotation-mark-img img:nth-child(6) {
+    left: 9%;
+    bottom: 6%;
+    animation: 7s infinite animation01;
+}
+.quotation-mark-img img:nth-child(5) {
+    left: 27%;
+    bottom: 15%;
+    animation: 7s infinite animation02;
+}
+.quotation-mark-img img:nth-child(8) {
+    left: 63%;
+    bottom: 5%;
+    animation: 7s infinite top;
+}
+.quotation-mark-img img:nth-child(7) {
+    right: 16%;
+    bottom: 15%;
+    animation: 7s infinite animation02;
+}
+.client-reviews {
+    position: relative;
+    padding-bottom: 160px;
+}
+.slider-recnt button.owl-dot.active,
+.review-slider button.owl-dot.active,
+.hero-slider button.owl-dot.active{
+    width: 50px;
+    height: 5px;
+    background-color: #ffee02;
+}
+.quotation .owl-dots {
+    position: relative;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    text-align: center;
+}
+.slider-experts .owl-nav {
+    position: absolute;
+    top: -23%;
+    right: 0%;
+    width: auto;
+}
+.quotation button.owl-dot{
+    width: 50px;
+    height: 3px;
+    background-color: #b7b7b7;
+    margin-left: 10px;
+}
+/* 16. pricing-plan-style */
+.pricing-plan-style h5 span {
+    font-size: 16px;
+    font-weight: 400;
+}
+.pricing-plan-style ul li {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.pricing-plan-style {
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #ffffff40;
+}
+.pricing-plan-style {
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #ffffff40;
+    position: relative;
+    width: 94%;
+}
+.pricing-plan-style ul li {
+    position: relative;
+}
+.pricing-plan-style ul {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #000;
+}
+.pricing-plan-style h5 {
+    font-weight: bold;
+    font-size: 60px;
+    padding-bottom: 27px;
+}
+.pricing-plan-style ul li:before {
+    width: 12px;
+    content: "";
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+.pricing-plan-style a.btn {
+    width: 100%;
+    background-color: #fff;
+    color: #000 !important;
+    border: 3px solid #000;
+}
+.pricing-plan-style:before {
+    content: "";
+    position: absolute;
+    top: -8%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -13%;
+    height: 91px;
+    transform: scale(0);
+    background-repeat: no-repeat;
+}
+.pricing-plan-style:hover:before {
+    transform: scale(1);
+}
+.pricing-plan-style h4 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-family: 'Lora';
+}
+.pricing-plan-style:hover {
+    background-color: #fff;
+}
+.pricing-plan-style a.btn:hover {
+    color: #fff !important;
+}
+.pricing-plan-section {
+    position: relative;
+}
+.pricing-plan-section img.shaps-dots {
+    right: 40%;
+    bottom: 4%;
+    z-index: -2;
+}
+/* 17. accordion-section */
+.accordion-section {
+    position: relative;
+}
+.accordion-section img.shaps-2 {
+    left: 6%;
+    top: 44%;
+    z-index: -1;
+}
+.accordion-section img.shaps-1 {
+    top: 46%;
+    left: auto;
+    right: 24%;
+    z-index: -1;
+}
+.accordion-item.active .heading {
+  color: #bccbb7;
+}
+.accordion-item .heading {
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.accordion-item .icon {
+    left: 25px;
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+}
+.accordion-item.active .icon i {
+    color: #fff;
+}
+.accordion-item.active .title {
+    color: #fff;
+}
+.accordion-item .content {
+  display: none;
+}
+.content p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+}
+.title {
+    text-align: start;
+    padding: 20px 70px;
+    padding-right: 0;
+    padding-right: 0;
+    color: black;
+    font-size: 22px;
+}
+.content {
+    background-color: #fff;
+    padding: 29px 39px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    border: 3px solid #108a00;
+    width: 96%;
+    margin-left: auto;
+    border-top: 0;
+    border-radius: 14px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -15px;
+    padding-top: 36px;
+}
+a.heading{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.accordion-item {
+    background-color: transparent;
+}
+.accordion-item.active a.heading {
+    color: black;
+    border-radius: 20px;
+}
+.accordion-item.active .icon i {
+    transform: rotate(90deg);
+}
+.accordion-item {
+    margin-bottom: 10px;
+}
+.accordion-item {
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px !important;
+}
+.accordion-style > p {
+    width: 55%;
+    margin-bottom: 40px;
+}
+.accordion-item a.heading {
+    border: 3px solid #000;
+    border-radius: 20px;
+}
+.accordion-item.active a.heading {
+    border: 0;
+}
+.accordion {
+    margin-right: -100px;
+    z-index: 111;
+    position: relative;
+}
+.questions-img img {
+    border-radius: 30px;
+}
+/* 18. blog style */
+.blog-style > a {
+    color: inherit;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+    color: #000;
+    background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+    transition: all 500ms ease;
+}
+.blog-style > a:hover {
+    background-size: 100% 1px;
+}
+.blog-style .date {
+    display: inline-block;
+    padding: 15px 34px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.blog-style .date a i {
+    padding-right: 13px;
+    color: #fff;
+}
+.blog-style .date a {
+    color: #fff;
+}
+.blog-style h4 {
+    font-size: 16px;
+    width: fit-content;
+    border-bottom: 1px solid;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+ul.list-unstyled.blog-card__meta {
+    display: flex;
+    margin-top: 20px;
+}
+.list-unstyled.blog-card__meta li {
+    margin-right: 34px;
+}
+.list-unstyled.blog-card__meta li i {
+    padding-right: 6px;
+}
+.list-unstyled a {
+    color: #000;
+}
+/* 19. footer */
+.footer {
+    padding-top: 170px;
+    position: relative;
+}
+footer .heading {
+    position: relative;
+}
+.footer:before {
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #000;
+    opacity: .3;
+}
+.footer .heading h2,.footer .heading p {
+    color: #fff;
+}
+.footer .heading a {
+    margin-top: 40px;
+}
+
+.address i {
+    background-color: #FFE773;
+    width: 90px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-right: 21px;
+}
+.address {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+}
+.address h3 {
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.address p a {
+    padding-left: 10px;
+}
+.address p,.address a {
+    color: #fff;
+}
+.address.location i {
+    background-color: #FFC0B3;
+}
+.address.email i {
+    background-color: #BDFFB2;
+}
+/* 20. social-icon */
+ul.social-icon{
+    display: flex;
+}
+ul.social-icon li{
+    margin-right: 6px;
+}
+ul.social-icon i {
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    transition: color .33s linear .5s, border-color ease-out .5s, background-color .33s linear 0s;
+    vertical-align: bottom;
+    width: 48px;
+    z-index: 1;
+}
+ul.social-icon i:hover{
+    color: #fff;
+    border-color: #108A00;
+}
+ul.social-icon i:after {
+    background-color: #108A00;
+    border-radius: 50%;
+    color: #fff;
+    content: '';
+    height: 67px;
+    position: absolute;
+    top: 0;
+    transform: scale(1) translateY(67px);
+    transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
+    width: 67px;
+    z-index: -1;
+}
+ul.social-icon i:hover i {
+    color: #ffffff;
+}
+ul.social-icon i:hover:after {
+    transform: scale(1.47) translateY(0);
+}
+/* 21. copyright */
+.copyright {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+    border-top: 1px solid #FFFFFF20;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.copyright p {
+    color: #fff;
+    font-size: 16px;
+}
+.accordion-section {
+    position: relative;
+}
+.accordion-section img.shaps-dots {
+    right: 11%;
+    bottom: 60%;
+    z-index: 1;
+}
+/* 22. subscribe-with */
+.subscribe-with,.click-here {
+    text-align: center;
+}
+.subscribe-with .hero-text {
+    width: 79%;
+    margin: auto;
+}
+.subscribe-with .hero-text p,
+.click-here .hero-text p {
+    text-align: center;
+    margin: auto;
+}
+.subscribe-with .subscribe-text p {
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    font-weight: bold;
+    color: #000;
+    padding-right: 30px;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.subscribe-text {
+    display: flex;
+    align-items: center;
+    background-color: #fcf5eb;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: relative;
+    border: 3px solid #000;
+    width: 96%;
+    margin: auto;
+}
+.subscribe-text:before {
+    content: "";
+    position: absolute;
+    top: -41%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -4%;
+    height: 85px;
+    background-repeat: no-repeat;
+}
+.subscribe-with .rating,
+.click-here .rating {
+    justify-content: center;
+}
+.subscribe-with .rating {
+    margin-top: 60px;
+}
+.get-subscribee input {
+    width: 100%;
+    height: 60px;
+    border-radius: 40px;
+    border: 0;
+    outline: 0;
+    margin-right: 10px;
+    border: 1px solid;
+    padding-left: 30px;
+}
+form#subscribe-form {
+    display: flex;
+    align-items: center;
+    width: 82%;
+    justify-content: center;
+}
+.get-subscribee .btn {
+    padding: 20px 48px;
+    width: 247px;
+}
+/* 23. video-fram */
+.video-fram iframe {
+    width: 100%;
+}
+.video-section .rating {
+    margin-top: 50px;
+}
+.hs-responsive-embed-youtube iframe {
+    border-radius: 20px;
+}
+.video-fram {
+    border: 3px solid #000;
+    background-color: #fcf5eb;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+.video-fram:before {
+    content: "";
+    position: absolute;
+    top: -8%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -9%;
+    height: 85px;
+    background-repeat: no-repeat;
+}
+.video-fram h3 {
+    font-weight: bold;
+    padding-bottom: 14px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.video-section .hero-text p {
+    font-size: 22px;
+    width: 91%;
+    padding-bottom: 28px;
+}
+.click-here .hero-text {
+    width: 79%;
+    margin: auto;
+}
+/* 24. progress go to top */
+#progress {
+    z-index: 111;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#progress-value {
+    height: calc(110% - 15px);
+    width: calc(110% - 15px);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #ffffff;
+}
+span#progress-value i {
+    font-size: 22px;
+}
+/* 25. preloader */
+.preloader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999999999999999999;
+    right: 0;
+    top: 0;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.09, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.09, 1);
+}
+.preloader {
+    top: 0%;
+}
+.page-loaded .preloader {
+    top: -100%;
+}
+.loader {
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  background: currentColor;
+  color: #FFF;
+  -webkit-animation: animloader 0.3s 0.3s linear infinite alternate;
+          animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+.loader::after, .loader::before {
+  content: "";
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  -webkit-animation: animloader 0.3s 0.45s linear infinite alternate;
+          animation: animloader 0.3s 0.45s linear infinite alternate;
+}
+.loader::before {
+  left: -20px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана */
+}
+.centered-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.center-div > div > ul >li {
+    padding: 5px 0 0 20px;
+    font-weight: bold;
+    font-size: 24px
+}
+.examples {
+    border: solid 1px;
+    border-radius: 10px;
+}
+.text {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.title {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.input {
+    padding-bottom: 20px;
+}
+.footer-optional {
+    height: 150px;
+    background-color: #adb5bd;
+}
+.card-master {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 350px;
+    background-color: #ebebeb;
+}
+.card-master-btn {
+    background-color: #ebebeb;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-radius:  0 0 50px 15px;
+}
+.card-master-name {
+    background-color: #ebebeb;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-radius: 50px 15px 0 0;
+}
+.card-master div {
+    margin-left: 20px;
+    flex: 1;
+}
+.img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+}
+.flex-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.p-left {
+    text-align: left;
+}
+.p-right {
+    text-align: right;
+}
+.search-result-footer {
+    height: 100px;
+}
+@-webkit-keyframes animloader {
+  0% {
+    height: 48px;
+  }
+  100% {
+    height: 4.8px;
+  }
+}
+@keyframes animloader {
+  0% {
+    height: 48px;
+  }
+  100% {
+    height: 4.8px;
+  }
+}
+.main-content {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ebebeb;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(10%);
+    transition: transform 0.3s ease;
+}
+.sidebar ul {
+    margin-left: 50px;
+}
+.sidebar h3 {
+    margin-left: 50px;
+}
+.sidebar.visible {
+    transform: translateX(80%);
+}
+.content-area {
+    flex: 1;
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+.sidebar ul li > a {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.master-info {
+    padding: 100px ;
+    display: flex;
+    justify-content: space-between;
+}
+.master-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 300px;
+}
+.master-content-right {
+    background-color: #ebebeb;
+    border-radius: 50px 15px 50px 15px;
+    padding-left: 40px;
+}
+.master-content-right > div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.master-content-right > div >h5 {
+    font-weight: bold;
+    background-color: white;
+    margin-right: 40px;
+    padding:   15px 0 15px 40px;
+    border-radius: 10px 10px 0 0;
+    min-width: 950px;
+}
+.about_price {
+    font-weight: bold;
+    background-color: white;
+    padding-left: 40px;
+    margin-top: -20px;
+}
+.master-content-right > div >p {
+    font-size: 20px;
+    background-color: white;
+    margin-right: 40px;
+    padding-left: 20px;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 20px;
+}
+.photo-slider {
+    display: flex;
+    justify-content: flex-start; /* Элементы выровнены по левому краю */
+    align-items: center; /* Вертикальное выравнивание по верхнему краю, если нужно */
+    overflow: hidden; /* Скрываем переполнения */
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 10px 40px 40px 40px;
+    border-radius: 0 0 10px 10px;
+}
+.review-slider {
+    display: flex;
+    justify-content: flex-start; /* Элементы выровнены по левому краю */
+    align-items: center; /* Вертикальное выравнивание по верхнему краю, если нужно */
+    overflow: hidden; /* Скрываем переполнения */
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 10px 40px 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.job-photos {
+    display: flex; /* Размещаем фото в ряд */
+    transition: transform 0.3s ease; /* Анимация перемещения */
+    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    white-space: nowrap; /* Запрещаем перенос изображений */
+    width: 100%;
+    border-radius: 10px;
+}
+.review-photos {
+    display: flex; /* Размещаем фото в ряд */
+    transition: transform 0.3s ease; /* Анимация перемещения */
+    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    white-space: nowrap; /* Запрещаем перенос изображений */
+    width: 100%;
+    border-radius: 10px;
+}
+.feedbacks-photos {
+    display: flex; /* Размещаем фото в ряд */
+    transition: transform 0.3s ease; /* Анимация перемещения */
+    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    white-space: nowrap; /* Запрещаем перенос изображений */
+    width: 100%;
+    padding-top: 20px;
+}
+.image {
+    width: 100px; /* Фиксированная ширина изображений */
+    height: auto; /* Автоматическая высота */
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-button {
+    background: none; /* Без фона */
+    border: none; /* Без обводки */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 24px; /* Размер стрелок */
+    padding: 10px;
+    z-index: 1;
+    display: none; /* Скрываем кнопки по умолчанию */
+}
+
+.left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider-button.show {
+    display: block; /* Показываем кнопки, если они нужны */
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Темный фон с прозрачностью */
+}
+
+.modal-container {
+    display: flex; /* Используем Flexbox для расположения фото и информации */
+    justify-content: flex-start; /* Устанавливаем горизонтальное выравнивание по левому краю */
+    align-items: stretch; /* Выравнивание элементов по высоте */
+    max-width: 80%; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрируем контейнер */
+    margin-top: 5%; /* Отступ сверху */
+    margin-bottom: 5%; /* Отступ снизу */
+    height: 80%; /* Устанавливаем фиксированную высоту для контейнера */
+}
+.modal-container-review {
+    display: flex; /* Используем Flexbox для расположения фото и информации */
+    justify-content: center; /* Устанавливаем горизонтальное выравнивание по левому краю */
+    align-items: stretch; /* Выравнивание элементов по высоте */
+    max-width: 80%; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрируем контейнер */
+    margin-top: 5%; /* Отступ сверху */
+    margin-bottom: 5%; /* Отступ снизу */
+    height: 80%; /* Устанавливаем фиксированную высоту для контейнера */
+}
+.modal-content {
+    max-width: 70%; /* Максимальная ширина изображения */
+    height: 100%; /* Высота изображения равна высоте контейнера */
+    object-fit: cover; /* Заполнение контейнера изображением */
+}
+
+.info {
+    width: 30%; /* Ширина блока информации */
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью */
+    padding: 20px; /* Отступ внутри блока информации */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для улучшения восприятия */
+    border-radius: 0 5px 5px 0; /* Скругление углов */
+    display: flex; /* Используем Flexbox для размещения текста внутри информации */
+    flex-direction: column; /* Вертикальное размещение текста */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.profile-user {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.profile-user > * {
+    margin: 0; /* Убираем внешние отступы у всех дочерних элементов */
+}
+
+.profile-user > :not(:first-child) {
+    margin-left: 10px; /* Добавляем отступ между элементами, если это необходимо */
+}
+.services > h5 {
+    padding-left: 15px;
+}
+.services {
+    margin-bottom: 15px;
+}
+.avatar {
+    width: 50px; /* Задайте нужный размер аватара */
+    height: 50px;
+    border-radius: 50%; /* Делаем картинку круглой */
+    margin-right: 10px; /* Пробел между аватаром и именем */
+}
+
+.profile-name {
+    margin: 0; /* Убираем стандартные отступы */
+    font-weight: bold;
+}
+.info > h3 {
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.photo-description {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.caption {
+    position: absolute;
+    top: 50%; /* Центрируем контейнер по вертикали */
+    left: 0; /* Начало отсчета от левого края */
+    right: 0; /* Конец отсчета от правого края */
+    display: flex; /* Используем Flexbox для размещения кнопок */
+    justify-content: space-between; /* Распределяем кнопки по краям */
+    align-items: center; /* Центрируем кнопки по вертикали */
+    transform: translateY(-50%); /* Сдвигаем контейнер вверх для точного центрирования */
+    width: 100%; /* Задаем ширину на 100% */
+}
+
+.prev, .next {
+    background: none; /* Без фона */
+    border: none; /* Без обводки */
+    color: white; /* Белый цвет текста */
+    font-size: 30px; /* Размер стрелок */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 50px; /* Отступ между кнопками */
+}
+
+.table-title {
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding:   15px 0 15px 40px;
+}
+.master-content-right > div > div > table {
+    font-size: 20px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+}
+.td-services {
+    padding: 20px 40px 10px 20px;
+}
+.column {
+    padding-right: 20px;
+    text-align: end;
+}
+.grade-column {
+    padding-right: 40px;
+    text-align: end;
+    width: 60px;
+    font-weight: bold;
+}
+.master-sidebar {
+    position: fixed;
+    padding-top: 20px;
+    width: 20%;
+    margin-top: 50px;
+}
+
+.master-sidebar > div {
+    padding: 10px 0 10px 80px;
+    position: relative;
+    width: 50%;
+}
+.master-sidebar > div:hover,
+.master-sidebar > div.active {
+    background-color: #ebebeb;
+    border-radius: 10px;
+}
+.master-sidebar > div > a {
+    font-size: 18px;
+    font-weight: bold;
+}
+.master-sidebar > div > a:hover {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #108A00;
+}
+.table-feedbacks {
+    background-color: white;
+    width: 100%;
+}
+.grade-td {
+    font-weight: bold;
+    padding:  10px 0 10px 40px;
+    width: 150px;
+    vertical-align: middle; /* Центрирование по вертикали */
+    text-align: left; /* Выравнивание по горизонтали (по желанию) */
+}
+.feedbacks-content {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.feedbacks-content > tr {
+
+}
+.hr-feedbacks-content {
+    margin: 0;
+}
+.feedbacks {
+    padding-right: 40px;
+    margin-bottom: 0 !important;
+}
+.feedbacks-table-end {
+    background-color: white;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 40px 0 0 !important;
+}
+.hr-feedbacks {
+    background-color: black;
+    margin: 0 40px 0 40px !important;
+}
+.answer {
+    display: flex; /* Используем flexbox для расположения в ряд */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.answer-title {
+    display: flex; /* Используем flexbox для расположения в ряд */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    align-items: flex-start;
+    margin-left: 20px;
+}
+.sort {
+    background-color: white;
+    padding:  20px 0 20px 40px;
+    display: flex;
+    justify-content: center; /* Выравнивание по левому краю */
+    align-items: center;
+}
+.sort > form > select {
+    border: none; /* Убираем границу */
+    outline: none; /* Убираем обводку при фокусировке */
+    font-size: 18px; /* Размер шрифта */
+    background-color: #fff; /* Цвет фона */
+    cursor: pointer; /* Курсор при наведении */
+    font-weight: bold;
+    padding-left: 20px;
+}
+/* Стили для селектора при фокусировке */
+.sort > select:focus {
+    outline: none; /* Убираем обводку при фокусировке */
+    box-shadow: none; /* Убираем тень, если она есть */
+}
+.date-center {
+    text-align: center;
+    vertical-align: top;
+}
+.check-box {
+    display: flex;
+    align-items: center;
+    margin: 10px 10px 20px 10px;
+}
+.services-labels {
+    display: flex;
+    justify-content: space-between;
+}
+.check-box .form-check-input {
+    appearance: none; /* Убираем стандартный стиль чекбокса */
+    width: 18px;      /* Ширина чекбокса */
+    height: 18px;     /* Высота чекбокса */
+    border-radius: 4px; /* Скругления углов */
+    position: relative;   /* Для псевдоэлемента */
+    cursor: pointer; /* Курсор при наведении */
+    outline: none; /* Убираем обводку */
+    margin: 0; /* Убираем отступы */
+    vertical-align: middle; /* Вертикальное выравнивание */
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box; /* Включаем границы и отступы в общие размеры */
+}
+
+.check-box .form-check-input:checked {
+    background-color: #007bff; /* Цвет фона при чекнутом состоянии */
+    border-color: #007bff; /* Цвет границы */
+}
+
+.check-box .form-check-input:checked::before {
+    content: ''; /* Добавляем псевдоэлемент для галочки */
+    position: absolute;
+    top: 2px; /* Позиция по вертикали */
+    left: 6px; /* Позиция по горизонтали */
+    width: 4px; /* Уменьшенная ширина галочки */
+    height: 8px; /* Уменьшенная высота галочки */
+    border: solid white; /* Цвет галочки */
+    border-width: 0 2px 2px 0; /* Стиль галочки */
+    transform: rotate(45deg); /* Поворачиваем галочку */
+}
+
+.check-box .form-check-label {
+    margin-left: 8px; /* Отступ между чекбоксом и текстом */
+    font-size: 16px;  /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    cursor: pointer; /* Курсор при наведении на текст */
+    margin-bottom: 0;
+}
+.progress-bar-container {
+    width: 100%; /* Обеспечивает, что контейнер занимает всю ширину ячейки */
+    background-color: #f3f3f3; /* Цвет фона полосы заполнения */
+    border-radius: 5px; /* Скругление углов */
+    height: 10px; /* Высота полосы заполнения */
+    overflow: hidden; /* Скрыть избыточное содержимое */
+}
+
+.progress-bar {
+    height: 100%; /* Заполнение высоты контейнера */
+    background-color: #4caf50; /* Цвет заполнения полосы */
+    transition: width 0.3s; /* Плавный переход при изменении ширины */
+}
+.profile {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+.profile-content {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в колонку */
+    background-color: #fefefe;
+    margin: 20px auto;
+    border: 1px solid #888;
+    width: 30%; /* Ширина модального окна */
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+}
+.profile-content > form {
+    margin: 40px;
+}
+.profile-content > span {
+    position: absolute; /* Абсолютное позиционирование для элемента span */
+    height: 20px;
+    right: 20px; /* Расстояние от правого края контейнера */
+}
+.profile-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.profile-close:hover,
+.profile-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.form-btn {
+   width: 100%;
+    margin-top: 20px;
+}
+.profile-master-content {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в колонку */
+    background-color: #fefefe;
+    margin: 1% auto;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+}
+.profile-master-content > form {
+    margin: 40px;
+}
+.profile-master-content > span {
+    position: absolute; /* Абсолютное позиционирование для элемента span */
+    height: 20px;
+    right: 20px; /* Расстояние от правого края контейнера */
+}
+.profile-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.profile-close:hover,
+.profile-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.master-form-btn {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.file-upload {
+    background-color: #fff;
+    border: 1px solid #444;
+    width: 100%; /* Занять полную ширину родителя */
+    height: 55px; /* Высота блока */
+    border-radius: 50px; /* Округленные края */
+    display: flex;
+    align-items: center; /* Центрировать элементы по вертикали */
+    justify-content: flex-start; /* Выравнивание элементов по левому краю */
+    cursor: pointer; /* Указатель курсора при наведении */
+    margin-bottom: 20px;
+    padding: 11px 15px 0 15px; /* Добавлено для отступа слева и справа */
+}
+.file-upload > span {
+    margin-left: 15px; /* Отступ между текстами */
+}
+.file-upload:hover {
+    background-color: #e0e0e0; /* Цвет при наведении */
+}
+
+.file-upload input[type="file"] {
+    display: none; /* Скрываем стандартный input */
+}
+
+.file-upload span {
+    color: #aaa; /* Цвет текста */
+}
+.group-img {
+    text-align: center; /* Центрируем текст внутри контейнера */
+    margin-bottom: 40px;
+    position: relative;
+}
+.city-group-img {
+    margin-bottom: 10px;
+    text-align: center; /* Центрируем текст внутри контейнера */
+    position: relative;
+}
+.group-img label {
+    display: block; /* Превращаем метку в блочный элемент */
+    margin-bottom: 8px; /* Отступ снизу для более приятного отображения */
+    font-size: 20px;
+}
+.all-check-box {
+    display: flex; /* Используем Flexbox для выстраивания в ряд */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    flex-wrap: wrap; /* Позволяем перенос элементов на новую строку, если не умещаются */
+}
+.check-box {
+    margin: 0 15px; /* Устанавливаем отступы между чекбоксами */
+    display: flex; /* Используем Flexbox для вертикального центрирования текста */
+    align-items: center; /* Центрируем текст по вертикали */
+}
+.group-img textarea {
+    width: 100%;
+    height: 400px; /* установите нужную высоту */
+    box-sizing: border-box; /* учесть паддинги и границы в ширине */
+    padding: 10px; /* отступы внутри textarea */
+    border: 1px solid #ccc; /* рамка textarea */
+    border-radius: 20px; /* радиус углов, по желанию */
+    font-size: 18px;
+}
+.cities-content {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в колонку */
+    background-color: #fefefe;
+    margin: 10% auto;
+    border: 1px solid #888;
+    width: 40%; /* Ширина модального окна */
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+}
+.cities-content > form {
+    margin: 40px;
+}
+.cities-content-up {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в колонку */
+    background-color: #fefefe;
+    margin: 8% auto;
+    border: 1px solid #888;
+    width: 45%; /* Ширина модального окна */
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+}
+
+.cities-content-up > form {
+    margin: 0 40px 0 40px
+}
+.cities-content-up > span {
+    position: absolute; /* Абсолютное позиционирование для элемента span */
+    height: 20px;
+    right: 20px; /* Расстояние от правого края контейнера */
+}
+.cities-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cities-close:hover,
+.cities-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.city-user {
+    display: flex;            /* Устанавливаем флекс-контейнер */
+    justify-content: center;  /* Выравниваем по горизонтали */
+    align-items: center;      /* Выравниваем по вертикали */
+    height: 100%;             /* Убедитесь, что у контейнера есть высота */
+}
+.city-get-a-quote h6 {
+    color: #444;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 29px;
+}
+.city-get-a-quote {
+    background-color: #fcf5eb;
+    padding: 40px 50px 0 50px;
+    border: 3px solid #000;
+    border-radius: 40px 40px 0 0; /* Закругляем только верхние углы */
+    /* Убираем нижнюю границу */
+    border-bottom: none;
+}
+.city-get-a-quote:before {
+    content: "";
+    position: absolute;
+    top: -6%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -9%;
+    height: 85px;
+    background-repeat: no-repeat;
+}
+.city-get-a-quote p {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.city-get-a-quote input, .get-a-quote input[type="number"] {
+    width: 100%;
+    height: 55px;
+    outline: 0;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 45px;
+    padding: 25px;
+    border: 1px solid #444;
+}
+.city-get-a-quote input[type="text"]::placeholder, .get-a-quote input[type="number"]::placeholder {
+    color: black;
+}
+.city-down-get-a-quote {
+    margin-bottom: 16px;
+    background-color: #fcf5eb;
+    padding: 20px 50px;
+    border: 3px solid #000;
+    border-radius: 0 0 40px 40px; /* Закругляем только нижние углы */
+    /* Убираем верхнюю границу */
+    border-top: none;
+}
+.input-price {
+    height: 25px;
+    width: 150px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.get-a-quote-price {
+    background-color: #fcf5eb;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+    padding: 40px;
+    position: relative;
+    border: 3px solid #000;
+    border-radius: 40px;
+}
+.get-a-quote-price:before {
+    content: "";
+    position: absolute;
+    top: -6%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -9%;
+    height: 85px;
+    background-repeat: no-repeat;
+}
+.get-a-quote-price p {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.services-title {
+    display: flex; /* Используем Flexbox для расположения элементов в строку */
+    justify-content: space-between; /* Размещаем элементы по краям контейнера */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    margin-bottom: 10px; /* Добавляем отступ снизу при необходимости */
+}
+
+.services-title h6 {
+    margin: 0; /* Убираем отступы у заголовков */
+}
+.auth-info {
+    width: 280px;
+    text-align: center;
+    background-color: #ebebeb;
+    border: solid 1px;
+    border-radius: 10px;
+}
+.auth-info > h4 {
+    font-size: 22px;
+}
+/* transition */
+.pricing-plan-style a.btn,
+.pricing-plan-style a.btn,.pricing-plan-style:before,
+.team-text a.brand i,.team-style:before,.team-text,
+.clients-slider .item img,.service-text i svg,.pricing-plan-style,
+.consulting-business-text,.consulting-business-text:before {
+    transition: 0.3s ease-in-out;
+}
+
+.get-a-quote-message {
+    margin: 50px auto;
+    background-color: #fcf5eb;
+    padding: 0 50px  20px 50px;
+    border-radius: 40px;
+    position: relative;
+    border: 3px solid #000;
+}
+.get-a-quote-message:before {
+    content: "";
+    position: absolute;
+    top: -6%;
+    background-image: url(../img/agency.png);
+    width: 85px;
+    left: -9%;
+    height: 85px;
+    background-repeat: no-repeat;
+}
+.get-a-quote-message p {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.get-a-quote-message input, .get-a-quote-message input[type="number"] {
+    width: 100%;
+    height: 55px;
+    outline: 0;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 45px;
+    padding: 25px;
+    border: 1px solid #444;
+}
+.get-a-quote-message input[type="text"]::placeholder, .get-a-quote input[type="number"]::placeholder {
+    color: black;
+}
+.message-content {
+    text-align: center; /* Центрируем текст внутри контейнера */
+    margin-bottom: 40px;
+    position: relative;
+}
+.message-content textarea {
+    width: 100%;
+    height: 100px; /* установите нужную высоту */
+    box-sizing: border-box; /* учесть паддинги и границы в ширине */
+    padding: 10px; /* отступы внутри textarea */
+    border: 1px solid #ccc; /* рамка textarea */
+    border-radius: 20px; /* радиус углов, по желанию */
+    font-size: 18px;
+}
+.message-image {
+    display: flex; /* Включаем flex-контейнер */
+    flex-direction: row; /* Устанавливаем горизонтальную ориентацию для вложенных элементов */
+    justify-content: flex-start; /* Выравниваем содержимое по началу оси (влево) */
+    align-items: flex-end; /* Выравниваем элементы по нижнему краю контейнера */
+    padding: 10px;
+    overflow: hidden; /* Скрывает содержимое, выходящее за пределы блока */
+}
+
+.message-image > img {
+    margin-right: 10px; /* Пример отступа между изображениями */
+    max-height: 150px; /* Ограничивает максимальную высоту изображений для гармоничного отображения */
+    max-width: 200px; /* Ограничивает максимальную ширину блока */
+    height: auto;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Обеспечить, чтобы модальное окно было выше других элементов */
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 1001; /* Убедиться, что изображение выше фона */
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1002; /* Кнопка закрытия выше всех остальных элементов */
+}
+
+.answer-content {
+    width: 80%; /* Ширина каждого блока */
+    margin: 20px; /* Отступ между блоками */
+    background-color: #f0f0f0; /* Цвет фона для наглядности */
+    padding: 20px; /* Отступ внутри блока */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для блока */
+    float: right; /* Плаваем вправо */
+    border-radius: 10px;
+}
+.message-cont {
+    width: 80%; /* Ширина каждого блока */
+    background-color: #f0f0f0; /* Цвет фона для наглядности */
+    padding: 20px; /* Отступ внутри блока */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для блока */
+    float: left; /* Плаваем вправо */
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px
+}
+.message-count {
+    margin-left: 10px; /* Отступ слева от количества сообщений */
+    font-weight: bold; /* Сделать текст жирным */
+}
+.mark-no-read {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+}
+#messages-window {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование окна */
+    z-index: 1000; /* Убедитесь, что окно выше других элементов */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для окна */
+    padding: 20px; /* Внутренние отступы */
+    display: none; /* Скрыто по умолчанию */
+}
+#mess-window {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование окна */
+    z-index: 1000; /* Убедитесь, что окно выше других элементов */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для окна */
+    padding: 20px; /* Внутренние отступы */
+    display: none; /* Скрыто по умолчанию */
+}
+
+.job-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* расстояние между элементами */
+    margin-top: 20px;
+}
+
+.job-images-upload {
+    cursor: pointer; /* показывает, что на элемент можно кликнуть */
+}
+.image-title {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+.image-description {
+    width: 100%;
+    height: 100px; /* установите нужную высоту */
+    box-sizing: border-box; /* учесть паддинги и границы в ширине */
+    padding: 10px; /* отступы внутри textarea */
+    border: 1px solid #ccc; /* рамка textarea */
+    border-radius: 20px; /* радиус углов, по желанию */
+    font-size: 18px;
+}
+
+.my-images {
+    display: flex;
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    margin: 20px 0 0 0; /* Отступ вокруг блока */
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 40px 40px 20px 40px;
+}
+
+.image-info {
+    display: flex; /* Устанавливает элементы в строку */
+    flex-direction: column; /* Размещает элементы вертикально */
+    width: 70%; /* Ширина 70% */
+    margin-right: 20px; /* Отступ справа от .image-info */
+}
+.image-info > div > label {
+    margin-left: 10px;
+}
+
+.img-title,
+.img-description {
+    margin-bottom: 10px; /* Отступ между заголовком и описанием */
+}
+
+.img-upload {
+    flex-shrink: 0; /* Предотвращает сжатие этой части */
+    width: 30%; /* Установите желаемую ширину для .img-upload */
+    max-width: 300px; /* Ограничьте максимальную ширину */
+    margin-left: 20px; /* Отступ слева для разделения с .image-info */
+}
+
+.job-img {
+    width: 100%; /* Заставляет изображение занимать 100% доступной ширины .img-upload */
+    height: auto !important; /* Сохраняет пропорции изображения */
+    display: block; /* Убирает отступы под изображением, если это необходимо */
+    border: solid 1px;
+    border-radius: 5px;
+}
+.buttons {
+    background: white;
+    border-radius: 0 0 20px 20px;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center; /* Выравнивает кнопки по центру по горизонтали */
+    align-items: center; /* Выравнивает кнопки по центру по вертикали */
+    padding-bottom: 20px;
+}
+
+.buttons > a {
+    margin: 0 10px; /* Добавляет отступ между кнопками */
+    text-align: center; /* Центрирует текст внутри кнопок, если нужно */
+    padding: 10px 20px; /* Добавляет внутренние отступы для кнопок */
+    background: #007bff; /* Цвет фона кнопки (по желанию) */
+    color: white; /* Цвет текста (по желанию) */
+    border: none; /* Убирает рамку (по желанию) */
+    border-radius: 5px; /* Сглаживание углов (по желанию) */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+}
+
+.my-orders {
+    display: flex;                /* Устанавливаем Flexbox для родительского контейнера */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    padding: 10px 10px 0 10px; /* Отступы вокруг контейнера */
+    border: 1px solid #ccc;     /* Граница вокруг контейнера, можно настроить */
+    border-radius: 10px;         /* Закругление углов */
+    background-color: #f9f9f9;  /* Цвет фона контейнера */
+    margin-bottom: 20px;
+}
+
+.my-orders > div {
+    flex: 1;                     /* Каждый вложенный div займет равное пространство */
+    margin-right: 15px;         /* Отступ между вложенными дивами */
+    margin-left: 20px;
+}
+.my-orders > div > label {
+    padding-left: 20px;
+}
+.my-orders > div > div > label {
+    padding-left: 20px;
+}
+
+.star {
+    font-size: 80px;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.star.selected {
+    color: gold;
+}
+
+
+
+.support-icon {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #108A00;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 62px;
+    height: 62px;
+
+    /* Добавлено для центрирования */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.support-icon:hover {
+    background-color: #0056b3;
+}
+
+.tooltip-label {
+    display: none;
+    position: absolute;
+    left: 72px; /* Ширина элемента + отступ */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-style: italic;
+    font-size: 16px;
+    white-space: nowrap;
+    z-index: 10;
+    color: #0d1116;
+}
+
+.support-icon:hover .tooltip-label {
+    display: block; /* Показываем при наведении */
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.report-table th,
+.report-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.report-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.report-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.report-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.report-table tfoot {
+    font-weight: bold;
+}
+
+.rep-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0 20px 0;
+}
+
+.rep-table th,
+.rep-table td {
+    border: none;  /* Убираем границы */
+    padding: 8px;
+    text-align: center;
+}
+
+.rep-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.report-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.rep-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.rep-table tfoot {
+    font-weight: bold;
+}
+
