@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -19,6 +20,9 @@ Route::middleware('guest')->group(function () {
     Route::post('/reset-password', [AuthController::class, 'passwordUpdate'])->name('password.update');
 });
 
-
+    //Виды реставрации(Подробнее...)
+    Route::get('/enamel', [TypeController::class, 'enamelInfo'])->name('enamel');
+    Route::get('/acrylic', [TypeController::class, 'acrylicInfo'])->name('acrylic');
+    Route::get('/liner', [TypeController::class, 'linerInfo'])->name('liner');
 
 
