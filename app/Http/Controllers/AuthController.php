@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\PasswordUpdateRequest;
 use App\Http\Requests\RegistrationRequest;
+use App\Models\MasterInfo;
 use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Auth\Events\Registered;
@@ -30,6 +31,12 @@ class AuthController extends Controller
     {
         $user = User::create($request->validated());
         event(new Registered($user));
+
+        if ($user->role_id == 1) {
+            $masterInfo = new MasterInfo();
+            $masterInfo->create(['user_id' => $user->id]);
+        };
+
         Auth::login($user);
 
         return redirect()->route('verification.notice');
