@@ -22,18 +22,18 @@
             </div>
             <div class="col-lg-5">
                 <div class="examples">
-                    <img alt="img" class="examples" src="../../../public/assets/img/akril-do.jpg">
-                    <img alt="img" class="examples" src="../../../public/assets/img/akril-posle.jpg">
+                    <img alt="img" class="examples" src="assets/img/akril-do.jpg">
+                    <img alt="img" class="examples" src="assets/img/akril-posle.jpg">
                 </div>
             </div>
         </div>
     </div>
-    <img alt="img" class="shaps-line" src="../../../public/assets/img/shaps-line.png">
+    <img alt="img" class="shaps-line" src="assets/img/shaps-line.png">
 </section>
 <!-- Home end -->
 
 <!-- Services -->
-<section id="services" class="gap no-bottom" style="background-image: url(../../../public/assets/img/background_1.png);">
+<section id="services" class="gap no-bottom" style="background-image: url(assets/img/background_1.png);">
     <div class="container">
         <div class="heading">
             <h2>Как работает сервис <span>Master Vann Portal</span> ?</h2>
@@ -135,7 +135,7 @@
                 <div class="col-lg-4">
                     <div class="clients-data">
 
-                        <div class="clients-rate" style="background-image: url(../../../public/assets/img/background-line.png);">
+                        <div class="clients-rate" style="background-image: url(assets/img/background-line.png);">
                             <img src="../../../public/assets/img/logo-anex-2.png" alt="img">
                             <h3>4.9<span>/5</span></h3>
                             <p style="font-size: 22px">Средний рейтинг мастеров зарегистрированных на нашем портале.</p>
@@ -146,7 +146,7 @@
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                             </ul>
-                            <img src="../../../public/masters/img/master.jpg" alt="img">
+                            <img src="masters/img/master.jpg" alt="img">
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                             <h4></h4>
                             <h6>На рынке с 2009 года</h6>
                         </div>
-                        <img src="../../../public/assets/img/plastol.jpg" alt="img">
+                        <img src="assets/img/plastol.jpg" alt="img">
                         <div class="team-text">
                             <p style="font-size: 16px">
                                 Жидкий акрил Пластол обладает превосходной укрывистостью
@@ -174,7 +174,7 @@
                             <h4></h4>
                             <h6>На рынке с 2009 года</h6>
                         </div>
-                        <img src="../../../public/assets/img/ecovanna.jpeg" alt="img">
+                        <img src="assets/img/ecovanna.jpeg" alt="img">
                         <div class="team-text">
                             <p style="font-size: 16px">
                                 Материал обладает густой консистенцией,
@@ -191,7 +191,7 @@
                             <h4></h4>
                             <h6>На рынке с 2012 года</h6>
                         </div>
-                        <img src="../../../public/assets/img/finteks.jpg" alt="img">
+                        <img src="assets/img/finteks.jpg" alt="img">
                         <div class="team-text">
                             <p style="font-size: 16px">
                                 Данная модель завоевала популярность
@@ -207,7 +207,7 @@
 <!-- Team end -->
 
 <!-- Pricing -->
-<section id="type" class="pricing-plan-section gap" style="background-image: url(../../../public/assets/img/background_1.png);">
+<section id="type" class="pricing-plan-section gap" style="background-image: url(public/assets/img/background_1.png);">
         <div class="container">
             <div class="heading">
                 <h2>Какой вид <span>реставрации</span> подойдет для вас?</h2>

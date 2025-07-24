@@ -11,7 +11,9 @@
                     Мои сообщения
                     <span class="message-count">{{ count($messages) }}</span>
                 </a>
-                <a href="#orders" onclick="openUserOrdersWindow()">Мои заказы</a>
+                <a href="#orders" onclick="openUserOrdersWindow()">Мои заказы
+                    <span class="message-count">{{ count($orders) }}</span>
+                </a>
                 <a href="#supports" onclick="openUserSupportsWindow()">Мои обращения
                     <span class="message-count">{{ count($supports) }}</span>
                 </a>
