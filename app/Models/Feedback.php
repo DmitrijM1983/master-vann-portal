@@ -18,7 +18,8 @@ class Feedback extends Model
         'content',
         'service_provided',
         'images',
-        'answer'
+        'answer',
+        'is_read'
     ];
 
     protected $casts = [
