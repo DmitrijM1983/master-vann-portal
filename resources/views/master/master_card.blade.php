@@ -140,7 +140,11 @@
                 <!-- Рейтинг -->
                 <div>
                     <h5>Рейтинг мастера</h5>
-                    <p>{{ $master->mastersInfo->rating }} из 5</p>
+                    @if($master->mastersInfo->rating)
+                        <p>{{ $master->mastersInfo->rating }} из 5</p>
+                    @else
+                        <p>Оценок пока нет</p>
+                    @endif
                 </div>
 
                 <!-- Отзывы -->
